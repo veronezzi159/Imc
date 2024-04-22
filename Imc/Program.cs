@@ -83,3 +83,4 @@ if (sexo == "f" )
         }
     }
 }
+Console.WriteLine($"Seu imc é: {imc:0.00}");
