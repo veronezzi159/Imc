@@ -24,63 +24,72 @@ do
 
 imc = peso / (altura * altura);
 
-if (sexo == "f" )
+switch (sexo) 
 {
-    if (imc < 19)
-    {
-        Console.WriteLine("Abaixo do peso");
-    }
-    else
-    {
-        if (imc <= 23.9 && imc > 19)
+    case "f":
+        if (imc < 19)
         {
-            Console.WriteLine("Normal");
-        } else 
-        {
-            if (imc <= 28.9 && imc > 23.9)
-            {
-                Console.WriteLine("Obesidade Leve");
-            } else
-            {
-                if (imc <= 38.9 && imc > 28.9)
-                {
-                    Console.WriteLine("Obesidade Moderada");
-                }
-                else
-                {
-                    Console.WriteLine("Obesidade Mórbida");
-                }
-            }
+            Console.WriteLine("Abaixo do peso");
         }
-    }
-} else
-{
-    if (imc < 20)
-    {
-        Console.WriteLine("Abaixo do peso");
-    }
-    else
-    {
-        if (imc < 25 && imc >= 20)
+        else
         {
-            Console.WriteLine("Normal");
-        } else
-        {
-            if (imc < 30 && imc >= 25)
+            if (imc <= 23.9 && imc > 19)
             {
-                Console.WriteLine("Obesidade leve");
+                Console.WriteLine("Normal");
             }
             else
             {
-                if (imc < 40 && imc >= 30)
+                if (imc <= 28.9 && imc > 23.9)
                 {
-                    Console.WriteLine("Obesidade Moderada");
-                } else
+                    Console.WriteLine("Obesidade Leve");
+                }
+                else
                 {
-                    Console.WriteLine("Obesidade Mórbida");
+                    if (imc <= 38.9 && imc > 28.9)
+                    {
+                        Console.WriteLine("Obesidade Moderada");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Obesidade Mórbida");
+                    }
                 }
             }
         }
-    }
+        break;
+    case "m":
+        if (imc < 20)
+        {
+            Console.WriteLine("Abaixo do peso");
+        }
+        else
+        {
+            if (imc < 25 && imc >= 20)
+            {
+                Console.WriteLine("Normal");
+            }
+            else
+            {
+                if (imc < 30 && imc >= 25)
+                {
+                    Console.WriteLine("Obesidade leve");
+                }
+                else
+                {
+                    if (imc < 40 && imc >= 30)
+                    {
+                        Console.WriteLine("Obesidade Moderada");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Obesidade Mórbida");
+                    }
+                }
+            }
+        }
+        break;
+    default: break;
 }
+
+
 Console.WriteLine($"Seu imc é: {imc:0.00}");
